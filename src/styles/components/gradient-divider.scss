@@ -1,0 +1,44 @@
+.gradient-divider {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 20px; // ⬅️ Push the gradient line down slightly in desktop
+    left: -20%;
+    width: 160%;
+    height: 45px;
+    background: linear-gradient(90deg, #f2c450, #ee6cab);
+    transform: rotate(-3deg);
+    transform-origin: top left;
+    z-index: 1000;
+    pointer-events: none;
+  }
+
+  
+  @media (max-width: 768px) {
+    height: 60px;
+    z-index: 1; // Send behind the floating search (which is z-index: 3)
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px; // Reset for mobile view
+      left: 0;
+      width: 100%;
+      height: 35px;
+      background: linear-gradient(90deg, #f9636b, #faaa3c);
+      transform: rotate(-2deg);
+      z-index: inherit; // inherit the lower z-index
+    }
+  
+}
+
+}

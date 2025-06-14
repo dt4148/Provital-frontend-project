@@ -1,0 +1,23 @@
+@use './_variables' as *;
+@use './_mixins' as *;
+@use './components/header';
+@use './components/hero';
+@use './components/searchbar';
+@use './components/lifestylegrid';
+@use './components/howitworks';
+@use './components/navbar';
+@use './components/pilltabs';
+@use './components/pillcard';
+/* At the very top of the file */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}

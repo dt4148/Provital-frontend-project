@@ -1,0 +1,103 @@
+@use '../variables' as *;
+
+.pill-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 1200px;
+
+  button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background: #f3f3f3;
+    cursor: pointer;
+    font-size: 0.9rem;
+
+    &.active {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
+.scroll-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+
+  .scroll-btn {
+    position: absolute;
+    top: 35%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.left {
+      left: -20px;
+    }
+
+    &.right {
+      right: -20px;
+    }
+  }
+
+  .pill-card-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    scroll-behavior: smooth;
+  }
+
+}
+
+.pill-cards-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  .scroll-btn {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &.left {
+      margin-right: 0.5rem;
+    }
+
+    &.right {
+      margin-left: 0.5rem;
+    }
+  }
+
+  .pill-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+

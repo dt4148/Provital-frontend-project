@@ -1,0 +1,115 @@
+.navbar {
+  font-family: 'Inter', sans-serif; // ✅ Add Inter font
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+
+  .left-section {
+    .logo {
+      display: flex;
+      align-items: center;
+
+      .logo-icon {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .center-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      a {
+        font-family: 'Inter', sans-serif; // ✅ Explicitly set
+        text-decoration: none;
+        color: #444;
+        font-size: 14px;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #007bff;
+        }
+      }
+
+      .divider {
+        height: 20px;
+        width: 1px;
+        background-color: #ccc;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      margin-left: 20px;
+      cursor: pointer;
+
+      .dropdown-toggle {
+        font-family: 'Inter', sans-serif; // ✅ Add font here too
+        font-size: 14px;
+        color: #444;
+      }
+
+      .dropdown-menu {
+        font-family: 'Inter', sans-serif; // ✅ Ensure dropdown uses it
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        z-index: 100;
+
+        .dropdown-row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 0;
+          border-bottom: 1px solid #ddd;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .label {
+            font-family: 'Inter', sans-serif; // ✅ Optional but safe
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+            flex: 1;
+          }
+
+          a {
+            font-family: 'Inter', sans-serif; // ✅ Add here as well
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: none;
+            margin-left: 15px;
+            white-space: nowrap;
+
+            &:hover {
+              text-decoration: underline;
+              color: #0056b3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use '../variables' as *;
+
+.pill-card {
+  min-width: 300px;
+  max-width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  .card-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .card-info {
+    padding: 1rem;
+
+    .pill-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #f1f1f1;
+      border-radius: 16px;
+      width: fit-content;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+
+      .pill-icon {
+        font-size: 1rem;
+      }
+
+      .pill-time {
+        font-weight: bold;
+      }
+    }
+
+    h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $text-dark;
+    }
+  }
+}
